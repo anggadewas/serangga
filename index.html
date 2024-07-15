@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rive Animation</title>
+</head>
+<body>
+  <!-- Elemen untuk menampilkan animasi -->
+  <canvas id="rive-container" width="800" height="600"></canvas>
+
+  <!-- Tambahkan Rive.js dari CDN -->
+  <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Buat instance baru dari Rive
+      const rive = new rive.Rive({
+        src: 'supermario.riv',  // Path ke file .riv Anda
+        canvas: document.getElementById('rive-container'),  // Elemen tempat animasi akan dirender
+        autoplay: true,  // Autoplay animasi saat dimuat
+      });
+    });
+  </script>
+</body>
+</html>
